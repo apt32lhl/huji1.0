@@ -11,13 +11,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>Insert title here</title>
 </head>
 <body>
-<form action="index/login" modelAttribute="user"  method="post">
-	<label>ÕËºÅ£º</label><input type="text" name ="userName"/><br>
-	<label>ÃÜÂë£º</label><input type="password" name="userPass"/><br>
-	<input type="reset" value="ÖØÖÃ"/>
-	<input type="submit" value="µÇÂ¼">
-	<a href="index/login">µÇÂ¼ÕËºÅ</a><br>
-	${errorMessage }<br>
-</form>
+¹§Ï²Äú£¬µÇÂ¼³É¹¦
 </body>
 </html>

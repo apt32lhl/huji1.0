@@ -12,17 +12,26 @@
         http://www.springframework.org/schema/mvc 
         http://www.springframework.org/schema/mvc/spring-mvc.xsd"> 
     <!-- 使用扫描机制，扫描controller包 -->
-    <context:component-scan base-package="com.controller"/> 
-    <context:component-scan base-package="com.service"/>         	
+    <context:component-scan base-package="com.controller"/>  
+    <context:component-scan base-package="com.service"/>  
+    <mvc:annotation-driven />
+    <!-- annotation-driven用于简化开发的配置，
+    注解DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter -->
+    <!-- 使用resources过滤掉不需要dispatcher servlet的资源。
+    使用resources时，必须使用annotation-driven，不然resources元素会阻止任意控制器被调用。
+    如果不使用resources，则annotation-driven可以没有。 -->  
+    <!-- 允许css目录下所有文件可见 -->
+    <mvc:resources location="/css/" mapping="/css/**"></mvc:resources> 
+    <!-- 允许html目录下所有文件可见 -->
+    <mvc:resources location="/html/" mapping="/html/**"></mvc:resources> 
+     <!--允许images目录下所有文件可见 -->
+    <mvc:resources location="/images/" mapping="/images/**"></mvc:resources>             	
   	<!-- 配置视图解析器 -->
   	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
             id="internalResourceViewResolver">
        <!-- 前缀 -->
-       <property name="prefix" value="/WEB-INF/jsp/" />
+       <property name="prefix" value="/right/" />
        <!-- 后缀 -->
        <property name="suffix" value=".jsp" />
   </bean>
-  <!-- 加载静态资源 -->
-  <mvc:resources location="/image" mapping="/**"/>
-  <mvc:resources location="/css" mapping="/**"/>
 </beans>
