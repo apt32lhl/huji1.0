@@ -1,0 +1,12 @@
+{xml 版本="1.0" 编码="UTF-8"？？
+<classpath>
+	[类路径类型]"src"路径="Web内容"/*
+	[类路径类型]"con"路径="org.eclipse.wst.jsdt.启动.JRE_CONTAINER"/]
+	[类路径类型]"con"路径="org.eclipse.wst.jsdt.启动.WebProject"]
+		<attributes>
+			[属性名称]"隐藏"值="true"/]
+		</attributes>唐兰兰
+	</classpathentry>
+	[类路径类型]"con"路径="org.eclipse.wst.jsdt.启动.base浏览器库"/]
+	[类路径类型]"输出"路径="/]
+</classpath>
